@@ -1,0 +1,83 @@
+@import '../../variables.scss';
+
+.homepage-section {
+  padding: 50px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 5px 10px;
+  }
+
+  &__title {
+    font-size: 40px;
+    color: $mainFontColor;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    line-height: 45px;
+
+    @media screen and (max-width: 400px) {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  &__subtitle {
+    color: $blueFontColor;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+
+    @media screen and (max-width: 400px) {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+
+  &__text-content {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1;
+    color: $mainFontColor;
+    white-space: pre-line;
+
+    @media screen and (max-width: 400px) {
+      font-size: 12px;
+      line-height: 1;
+    }
+  }
+
+  &__button {
+    padding: 5px 20px;
+    border-radius: 3px;
+    border: 2px solid $blueFontColor;
+    color: $blueFontColor;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    background: transparent;
+    text-transform: uppercase;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .3s ease;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      border: 2px solid darken($color: $blueFontColor, $amount: 10%);
+      color: darken($color: $blueFontColor, $amount: 10%);
+      background-color: lighten($color: $blueFontColor, $amount: 45%);
+    }
+  }
+}

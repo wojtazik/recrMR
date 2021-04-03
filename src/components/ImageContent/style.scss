@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.image-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--blue {
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: lighten($color: $blueFontColor, $amount: 15%);
+      opacity: .85;
+    }
+  }
+}

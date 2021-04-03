@@ -1,0 +1,22 @@
+.homepage-grid-layout {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+
+  &:not(.homepage-grid-layout--small) {
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    height: 100%;
+    max-height: 50vh;
+
+    &--small {
+      max-height: 25vh;
+    }
+  }
+}

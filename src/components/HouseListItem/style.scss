@@ -1,0 +1,60 @@
+.house-list-item {
+  padding: 25px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 9px 18px 0px rgba(0,0,0,0.45);
+  margin: 15px;
+  min-width: 300px;
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: 5px 9px 24px 0px rgba(0,0,0,0.55);
+  }
+
+  &__label {
+    border-bottom: 1px solid #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__detail {
+    display: flex;
+    margin-bottom: 5px;
+
+    & > span:first-child {
+      margin-right: 15px;
+      font-weight: 700;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+    height: 100%;
+  }
+
+  &__button {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    border: none;
+    align-self: flex-end;
+    z-index: 100;
+    cursor: pointer;
+
+    &--red {
+      background-color: red;
+    }
+
+    &--green {
+      background-color: green;
+    }
+  }
+}
